@@ -4,9 +4,15 @@
 @import './platform/highlight/highlight-theme';
 // Plus imports for other components in your app.
 
+// Define a custom typography config that overrides the font-family as well as the
+// `headlines` and `body-1` levels.
+$custom-typography: mat-typography-config(
+    $font-family: 'RobotoDraft, Roboto, Helvetica Neue, sans-serif'
+);
+
 // Include the base styles for Angular Material core. We include this here so that you only
 // have to load a single css file for Angular Material in your app.
-@include mat-core();
+@include mat-core($custom-typography);
 
 // Custom orange contrast
 $mat-orange-custom: ( 50: #FFF3E0,
